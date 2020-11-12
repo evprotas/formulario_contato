@@ -6,7 +6,7 @@ No momento não é possível testar a aplicação, pois o build não funciona e 
 
 ## Difuldades encontradas
 
-As principais dificuldades encontradas durante o desafio foram:
+As principais dificuldades encontradas durante a implementação do desafio foram:
 
 * Problemas com as versões mais recentes do Liferay Bundle e do Liferay Dev Studio, que não funcionavam por alguma razão. Só foi possível realizar a instação utilizando versões mais antigas.
 
