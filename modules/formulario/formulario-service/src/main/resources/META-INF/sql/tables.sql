@@ -1,0 +1,60 @@
+create table FC_Estado (
+	mvccVersion LONG default 0 not null,
+	uuid_ VARCHAR(75) null,
+	estadoId LONG not null primary key,
+	nome VARCHAR(75) null,
+	sigla VARCHAR(75) null,
+	codigo VARCHAR(75) null,
+	cidade VARCHAR(75) null,
+	groupId LONG,
+	companyId LONG,
+	userId LONG,
+	userName VARCHAR(75) null,
+	createDate DATE null,
+	modifiedDate DATE null,
+	status INTEGER,
+	statusByUserId LONG,
+	statusByUserName VARCHAR(75) null,
+	statusDate DATE null
+);
+
+create table FC_FormularioContato (
+	mvccVersion LONG default 0 not null,
+	uuid_ VARCHAR(75) null,
+	formularioId LONG not null primary key,
+	nome VARCHAR(75) null,
+	email VARCHAR(75) null,
+	estado VARCHAR(75) null,
+	cidade VARCHAR(75) null,
+	mensagem VARCHAR(75) null,
+	protocolo VARCHAR(75) null,
+	groupId LONG,
+	companyId LONG,
+	userId LONG,
+	userName VARCHAR(75) null,
+	createDate DATE null,
+	modifiedDate DATE null,
+	status INTEGER,
+	statusByUserId LONG,
+	statusByUserName VARCHAR(75) null,
+	statusDate DATE null
+);
+
+create table FC_Municipio (
+	mvccVersion LONG default 0 not null,
+	uuid_ VARCHAR(75) null,
+	municipioId LONG not null primary key,
+	nome VARCHAR(75) null,
+	codigo VARCHAR(75) null,
+	estadoId LONG,
+	groupId LONG,
+	companyId LONG,
+	userId LONG,
+	userName VARCHAR(75) null,
+	createDate DATE null,
+	modifiedDate DATE null,
+	status INTEGER,
+	statusByUserId LONG,
+	statusByUserName VARCHAR(75) null,
+	statusDate DATE null
+);

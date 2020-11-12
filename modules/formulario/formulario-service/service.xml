@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_2_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="formulario.contato" mvcc-enabled="true">
+    <author>Eglen</author>
+    <namespace>FC</namespace>
+    <entity name="FormularioContato" local-service="true" uuid="true" remote-service="true">
+    
+    	<!-- Formulario fields -->
+
+		<column name="formularioId" primary="true" type="long" />
+		<column name="nome" type="String" />
+		<column name="email" type="String" />
+		<column name="estado" type="String" />
+		<column name="cidade" type="String" />
+		<column name="mensagem" type="String" />
+		<column name="protocolo" type="String" />
+		
+		<!-- Group instance -->
+		
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		
+		<!-- Audit fields -->
+		
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Status fields -->
+		
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+		
+	    <finder name="GroupId" return-type="Collection">
+	        <finder-column name="groupId" />
+	    </finder>
+		
+	</entity>
+	
+	<entity name="Estado" local-service="true" uuid="true" remote-service="true">
+    
+    	<!-- Formulario fields -->
+
+		<column name="estadoId" primary="true" type="long" />
+		<column name="nome" type="String" />
+		<column name="sigla" type="String" />
+		<column name="codigo" type="String" />
+		<column name="cidade" type="String" />
+		
+		<!-- Group instance -->
+		
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		
+		<!-- Audit fields -->
+		
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Status fields -->
+		
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+		
+		<order>
+    		<order-column name="nome" order-by="desc" />
+		</order>
+		
+	    <finder name="GroupId" return-type="Collection">
+	        <finder-column name="groupId" />
+	    </finder>
+		
+	</entity>
+	
+	<entity name="Municipio" local-service="true" uuid="true" remote-service="true">
+    
+    	<!-- Formulario fields -->
+
+		<column name="municipioId" primary="true" type="long" />
+		<column name="nome" type="String" />
+		<column name="codigo" type="String" />
+		<column name="estadoId" type="long" />
+		
+		<!-- Group instance -->
+		
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		
+		<!-- Audit fields -->
+		
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Status fields -->
+		
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+		
+		<order>
+    		<order-column name="nome" order-by="desc" />
+		</order>
+		
+	    <finder name="GroupId" return-type="Collection">
+	        <finder-column name="groupId" />
+	    </finder>
+		
+	</entity>
+	
+	<exceptions>
+	    <exception>FormularioNome</exception>
+        <exception>FormularioEmail</exception>
+        <exception>FormularioTelefone</exception>
+        <exception>FormularioMensagem</exception>
+    </exceptions>
+
+</service-builder>
+    

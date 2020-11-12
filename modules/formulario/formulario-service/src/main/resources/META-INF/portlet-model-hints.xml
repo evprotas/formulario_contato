@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="formulario.contato.model.Estado">
+		<field name="mvccVersion" type="long" />
+		<field name="uuid" type="String" />
+		<field name="estadoId" type="long" />
+		<field name="nome" type="String" />
+		<field name="sigla" type="String" />
+		<field name="codigo" type="String" />
+		<field name="cidade" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
+	<model name="formulario.contato.model.FormularioContato">
+		<field name="mvccVersion" type="long" />
+		<field name="uuid" type="String" />
+		<field name="formularioId" type="long" />
+		<field name="nome" type="String" />
+		<field name="email" type="String" />
+		<field name="estado" type="String" />
+		<field name="cidade" type="String" />
+		<field name="mensagem" type="String" />
+		<field name="protocolo" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
+	<model name="formulario.contato.model.Municipio">
+		<field name="mvccVersion" type="long" />
+		<field name="uuid" type="String" />
+		<field name="municipioId" type="long" />
+		<field name="nome" type="String" />
+		<field name="codigo" type="String" />
+		<field name="estadoId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
+</model-hints>

@@ -1,0 +1,10 @@
+Bundle-Name: formulario-api
+Bundle-SymbolicName: formulario.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	formulario.exception,\
+	formulario.model,\
+	formulario.service,\
+	formulario.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../formulario-service/service.xml
